@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://grpc.wdx.com/schema/grpc"
+            xmlns:tns="http://grpc.wdx.com/schema/grpc"
+            elementFormDefault="qualified">
+
+    <!--定义netty启动绑定的端口 -->
+    <xsd:element name="port">
+        <xsd:complexType>
+            <xsd:attribute name="port" type="xsd:int" />
+        </xsd:complexType>
+    </xsd:element>
+    <!-- 定义service标签 使用方法 <grpc:service >-->
+    <xsd:element name="service">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:string" />
+            <xsd:attribute name="class" type="xsd:string" />
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
